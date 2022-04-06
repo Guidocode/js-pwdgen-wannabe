@@ -9,23 +9,37 @@
   3. stampa sulla pagina
 */
 
-const firstName = prompt("Inserise il tuo nome");
-const lastName = prompt("Inserise il tuo cognome");
-const favoriteColor = prompt("Inserise il tuo colore preferito");
+const firstName = prompt("Inserisci il tuo nome");
+const lastName = prompt("Inserisci il tuo cognome");
+const favoriteColor = prompt("Inserisci il tuo colore preferito");
+const yearsOld = 22;
 
 // Prova 1 
 console.log("Le info utente sono " + firstName + lastName + favoriteColor);
 
-document.getElementById("info-about-me").innerHTML += ("Mi chiamo " + firstName + " " + lastName + " e il mio colore preferito è " + favoriteColor);
+document.getElementById("info-about-me").innerHTML += ("Mi chiamo " + firstName + " " + lastName + ", il mio colore preferito è " + favoriteColor + " e ho " + yearsOld) + " anni.";
+
+// pw 
+document.getElementById("pw").innerHTML += (firstName + lastName + favoriteColor + yearsOld);
+
 
 
 // Prova 2
 const infoAboutMe = 
 `
 Alcune info su di me: 
-Il mio nome è ${firstName} ${lastName} e il mio colore preferito è ${favoriteColor}
+Il mio nome è ${firstName} ${lastName}, il mio colore preferito è ${favoriteColor} e ho ${yearsOld} anni.
 `;
 
 console.log("Le info utente sono " + infoAboutMe);
 
 document.getElementById("info-about-me2").innerHTML = infoAboutMe;
+
+// pw2 
+const pW2 = 
+`
+Password: 
+${firstName}${lastName}${favoriteColor}${yearsOld}
+`;
+
+document.getElementById("info-about-me2").innerHTML = pW2;
